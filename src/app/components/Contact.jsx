@@ -21,7 +21,7 @@ const Contact = ({ dark }) => {
 
     // Send the form data to your server
     try {
-      const response = await fetch('http://localhost:3000/api/product', {
+      const response = await fetch('/api/product', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
