@@ -33,8 +33,8 @@ const Contact = ({ dark }) => {
         // Reset the form fields or show a success message
         setFormData({ name: '', email: '', message: '' });
         // Display a success message
-        window.alert('Form submitted successfully.');
-        console.log('Form submitted successfully.');
+        window.alert('Your Request submitted successfully.');
+        // console.log('Form submitted successfully.');
       } else {
         // Handle errors or show an error message to the user
         console.error('Failed to submit the form.');
