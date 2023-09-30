@@ -20,28 +20,25 @@ const Contact = ({ dark }) => {
     e.preventDefault();
 
     // Send the form data to your server
-    try {
-      const response = await fetch('/api/product', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const response = await fetch('/api/product', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
 
-      if (response.ok) {
-        // Reset the form fields or show a success message
-        setFormData({ name: '', email: '', message: '' });
-        // Display a success message
-        window.alert('Your Request submitted successfully.');
-        // console.log('Form submitted successfully.');
-      } else {
-        // Handle errors or show an error message to the user
-        console.error('Failed to submit the form.');
-      }
-    } catch (error) {
-      console.error('Error submitting the form:', error);
+    if (response.ok) {
+      // Reset the form fields or show a success message
+      setFormData({ name: '', email: '', message: '' });
+      // Display a success message
+      window.alert('Your Request submitted successfully.');
+      // console.log('Form submitted successfully.');
+    } else {
+      // Handle errors or show an error message to the user
+      console.error('Failed to submit the form.');
     }
+
   };
 
 
